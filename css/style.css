@@ -1,6 +1,26 @@
+/*Index and Cores Style*/
+
 html {
     margin: 0;
     padding: 0;
+}
+#header img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: auto;
+}
+#header p {
+    font-size: 25pt;
+    color: black;
+    padding-top: 5px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+}
+#header {
+    background-color: skyblue;
+    background-size: cover;
 }
 body {
     font-family: 'Handlee', cursive;
@@ -14,7 +34,7 @@ h1 {
     color: #20bcd5;
     text-align: center;
     padding: 18px 0 18px 0;
-    margin: 0 0 10px 0;
+    margin: 0 0 30px 0;
 }
 h1 span {
     border: 4px dashed #20bcd5;
@@ -24,38 +44,38 @@ p {
     padding: 0;
     margin: 0;
 }
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+nav a:hover{
+    color: #c78c19;
+}
 .img-circle {
     border: 3px solid white;
     border-radius: 50%;
 }
 .section {
-    background-color: #fff;
+    background-color: yellow;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 10px;
 }
-#header {
-    background-color: greenyellow;
-    background-size: cover;
-}
-#header img {
-    display: block;
-    width: 80px;
-    height: 80px;
-    margin: auto;
-}
-#header p {
-    font-size: 25pt;
-    color: #3b464c;
-    padding-top: 5px;
-    margin: 0;
-    font-weight: bold;
+.box {
+    width: 100%;
     text-align: center;
+    margin: 10px 0px 20px 0;
 }
 .quote {
     font-size: 12pt;
     text-align: right;
     margin-top: 10px;
+}
+#about {
+    background-color: orange;
+}
+#knowleage, #hobbies, #studies, #experience {
+    background-color: greenyellow;
 }
 table {
     width: 100%;
@@ -75,17 +95,15 @@ li {
     margin-bottom: 15px;
     font-weight: bold;
 }
-.skills-items {
+li img {
+    border: 1px solid black;
+}
+.skills-Items, .hobbies-Items, .studies-Items {
     display: flex;
     flex-direction: row;
 }
-.hobbies-items{
-    display: flex;
-    flex-direction: row;
-}
-.studies-items {
-    display: flex;
-    flex-direction: row;
+.experience-Items {
+    flex-wrap: wrap;
 }
 .skill {
     width: 100%;
@@ -104,6 +122,9 @@ li {
     cursor: pointer;
     text-decoration: none;
 }
+
+/*Form Style and Behavior*/
+
 hr {
     border: 0;
     height: 1px;
@@ -112,6 +133,18 @@ hr {
 form {
     text-align: center;
     margin-top: 0;
+}
+form input {
+    transition: .3s ease all;
+}
+form input:focus {
+    border: 1px solid #0075ff;
+    outline: none;
+}
+.invalid-input {
+    border: 1px solid red;
+    opacity: 1;
+    background-color: lightpink;
 }
 .submit {
     background-color: #3fb6b2;
@@ -127,10 +160,11 @@ form {
 .submit:hover {
     background-color: #43a09d;
 }
-textarea {
-    height: 100px;
+.form p {
+    margin-top: 10px;
+    display: none;
 }
-input, textarea {
+input {
     margin-bottom: 10px;
     font-size: 11pt;
     padding: 15px 10px 10px;
@@ -140,6 +174,10 @@ input, textarea {
     border-radius: 5px;
     width: 70%;
     outline: none;
+}
+.input-Msg {
+    align-content: baseline;
+    height: 100px;
 }
 .face {
     transform: scale(0.4);
@@ -163,9 +201,76 @@ input, textarea {
 #contacts {
     text-align: center;
 }
+.notify-Name, .notify-Email, .notify-Affair, .notify-Msg {
+    display: none;
+    margin-top: 1em;
+    margin-left: 18em;
+    width: 50%;
+    text-align: center;
+    align-content: center;
+    color: red;
+    border: 5px solid lightpink;
+    background-color: lightpink;
+}
+.invalid-Name {
+    color: red;
+    font-weight: bold;
+    font-size: 20pt;
+}
+#notify-Valid {
+    display: none;
+    margin-top: 1em;
+    margin-left: 18em;
+    width: 50%;
+    text-align: center;
+    color: green;
+    border: 5px solid lightgreen;
+    background-color: lightgreen;
+}
+
 .copyright {
     font-size: 8pt;
-    text-align: right;
+    text-align: center;
     padding-bottom: 10px;
     color: grey;
+}
+
+/* Media Movile and Tablet */
+
+@media screen and (max-width: 414px) {
+    .box {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .skills-Items, .hobbies-Items, .studies-Items {
+        flex-wrap: wrap;
+    }
+    .experience-Items img {
+        max-width: 100%;
+        height: auto; 
+    }
+    .notify-Name, .notify-Email, .notify-Affair, .notify-Msg {
+        margin-left: 5em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    .experience-Items img {
+        max-width: 100%;
+        height: auto; 
+    }
+    .notify-Name, .notify-Email, .notify-Affair, .notify-Msg {
+        text-align: center;
+        margin-left: 10em;
+    }
 }

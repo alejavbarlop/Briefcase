@@ -6,13 +6,27 @@
         <link rel="stylesheet" type="text/css" href="./css/reset.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
     </head>
-    
+    <header id="header" class="section">
+            <div class="box">
+                <nav id="navBar">
+                    <ul class="menu">
+                        <li><a href="#about">Sobre mi</a></li>
+                        <li><a href="#knowleage">Skill</a></li>
+                        <li><a href="#hobbies">Hobbies</a></li>
+                        <li><a href="#studies">Formación</a></li>
+                        <li><a href="#experience">Proyectos</a></li>
+                        <li><a href="#copyright">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="profile">
+                <img alt="foto-perfil" class="img-circle" src="./img/Yo.png">
+            <p>Alejandro Barrios</p>    
+            </div>
+        </header>
     <body>
         <!-- header start -->
-        <header id="header" class="section">
-            <img alt="foto-perfil" class="img-circle" src="./img/Yo.png">
-            <p>Alejandro Barrios</p>
-        </header>
+        
         <!-- header end -->
         
         <!-- About Me section start -->
@@ -26,9 +40,9 @@
         <!-- About Me section end -->
         
         <!-- My Skills section start -->
-        <section class="section">
+        <section id="knowleage" class="section">
             <h1><span>Mis Habilidades</span></h1>
-            <ul class="skills-items">
+            <ul class="skills-Items">
                 <li class="skill">
                     <img src="./img/html.png" alt="HTML">
                 </li>
@@ -48,7 +62,7 @@
         <!-- My Hobbies section start -->
         <section id="hobbies" class="section">
             <h1><span>Mis Hobbies</span></h1>
-            <ul class="hobbies-items">
+            <ul class="hobbies-Items">
                  <li class="skill">Video Juegos<br/>
                     <img src="./img/videogames.png" alt="games">
                 </li>
@@ -65,7 +79,7 @@
         <!-- My Education section start -->
         <section id="studies" class="section">
             <h1><span>Mis Estudios</span></h1>
-            <ul class="studies-items">
+            <ul class="studies-Items">
                  <li class="skill">UNIR READIC<br/>
                     <img src="./img/unir.png" alt="games">
                     <p>2004</p>
@@ -84,16 +98,16 @@
 
         <!-- My Experience section start -->
         <section id="experience" class="section">
-            <h1><span>Mi Experiencia Professional</span></h1>
-            <ul class="studies-items">
-                 <li class="skill">Encriptador JS<br/>
+            <h1><span>Proyectos</span></h1>
+            <ul class="experience-Items">
+                 <li id="exp" class="skill">Encriptador JS<br/>
                     <img src="./img/Encriptador.png" alt="encriptador">
                     <div>
                         <a class="btn" href="https://github.com/alejavbarlop/Text-Encryptor">Repositorio</a>
                         <a class="btn" href="https://alejavbarlop.github.io/Text-Encryptor/">Demo</a>
                     </div>
                 </li>
-                <li class="skill">Ahorcado JS<br/>
+                <li id="exp" class="skill">Ahorcado JS<br/>
                     <img src="./img/Ahorcado.png" alt="ahorcado">
                     <div>
                         <a class="btn" href="https://github.com/alejavbarlop/Hangman-Game">Repositorio</a>
@@ -101,9 +115,10 @@
                     </div> 
                 </li>
             </ul>
-
+        </section>
+            
         <!-- Form section start -->
-        <section class="section">
+        <section id="contacts" class="section">
                 <h1><span>Contacto</span></h1>
 
                 <svg class="face" height="100" width="100">
@@ -115,17 +130,25 @@
                     <path d="M 30 70 q 20 20 40 0" stroke="#FFFFFF" stroke-width="5" fill="none" />
                 </svg>
                      
-                <form>
-                    <input name="name" placeholder="Nombre" type="text" required /><br/>
-                    <input name="email" placeholder="Email" type="email" required /><br/>
-                    <textarea name="message" placeholder="Mensage" required ></textarea>
-                    <input type="submit" value="ENVIAR" class="submit" />
+                <form id="form" class="form">
+                    <input class="input-Name" id="input-Name" name="name" placeholder="Nombre" type="text" required /><br/>
+                    <input class="input-Email" id="input-Email" name="email" placeholder="Email" type="email" required /><br/>
+                    <input class="input-Affair" id="input-Affair" name="affair" placeholder="Asunto" type="text" required /><br/>
+                    <input class="input-Msg" id="input-Msg" id="input-Msg" name="message" placeholder="Mensaje" type="text" required>
+                    <input type="submit" value="ENVIAR" id="submit" class="submit"/>
                 </form>
+                <div class="notify">
+                    <p id="notify-Name" class="notify-Name">El nombre tiene que ser maximo de 50 caracteres y solo puede contener letras.</p>
+                    <p id="notify-Email" class="notify-Email">El email no es valido o no esta en el formato correcto.</p>
+                    <p id="notify-Affair" class="notify-Affair">Debe exponer su asunto, maximo 50 caracteres y solo con letras.</p>
+                    <p id="notify-Msg" class="notify-Msg">Minimo 20 y maximo 500 caracteres.</p>
+                    <p id="notify-Valid" class="notify-Valid">Éxito al Enviar</p>
+                </div>        
         </section>
         <!-- Form section end -->
         
         <!-- Contacts section start -->
-        <section class="section" id="contacts">
+        <section id="contacts" class="section">
             <h1><span>Sigueme</span></h1>
             <div>
                 <a href="https://github.com/alejavbarlop/"/>
@@ -141,9 +164,11 @@
         </section>
         <!-- Contacts section end -->
         
-        <footer class="copyright">
-            &copy; 2022 SKRAPIX. All rights reserved.
+        <footer id="copyright" class="copyright">
+            <label>
+                &copy; 2022 SKRAPIX. All rights reserved.
+            </label>
         </footer>
-        
+        <script src="./js/script.js"></script>
     </body>
 </html>
